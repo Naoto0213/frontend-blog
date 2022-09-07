@@ -1,6 +1,17 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@generated/*": ["generated/*"],
+      "types/*": ["types/*"],
+      "@public/*": ["public/*"],
+      "@graphql/*": ["graphql/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
+    },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,6 +26,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/session.ts", "src/pages/api/github.ts"],
   "exclude": ["node_modules"]
 }
